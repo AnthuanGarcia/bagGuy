@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool dash = false;
     float horizontalMove;
-    bool decrementGravity = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,16 +28,10 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Vertical") &&
             Mathf.Approximately(Input.GetAxisRaw("Vertical"), -1))
-        {
             dash = true;
-            decrementGravity = true;
-        }
 
         if(Input.GetButtonUp("Vertical"))
-        {
             dash = false;
-            decrementGravity = false;
-        }
         
         UpdateState();
     }
@@ -49,8 +42,7 @@ public class PlayerMovement : MonoBehaviour
         movementController.Move(
             horizontalMove * Time.fixedDeltaTime,
             jump,
-            dash,
-            decrementGravity
+            dash
         );
 
         jump = false;
@@ -68,7 +60,10 @@ public class PlayerMovement : MonoBehaviour
         else
             animator.SetBool("isWalking", true);
 
-        if(jump) animator.SetBool("isJumping", true);
+        if(jump) 
+        {
+            animator.SetBool("isJumping", true);
+        }
 
     }
 }

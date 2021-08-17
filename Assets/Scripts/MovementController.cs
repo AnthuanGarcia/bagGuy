@@ -9,6 +9,7 @@ public class MovementController : MonoBehaviour
 	[SerializeField] private float m_DashTime = 2f;
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[Range(0, 2f)][SerializeField] private float m_CoyoteTime = 0.25f;
+	//[Range(0, 2f)][SerializeField]private float m_JumpTime = 0.5f; 
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
@@ -33,11 +34,15 @@ public class MovementController : MonoBehaviour
 	public BoolEvent OnCrouchEvent;
     Animator animator;
 	bool coyoteJump;
+
+	/* Dash variables */
 	float originalGravity;
 	float timePressDash;
 	float startTime;
 	bool hasTimeDash = true;
 	bool onePress = true;
+	/* ------------------- */
+	//bool hasTimeJump;
 
 	private void Awake()
 	{
@@ -72,13 +77,16 @@ public class MovementController : MonoBehaviour
 		else
 		{
 			if(wasGrounded)
+			{
+				animator.SetTrigger("lol");
 				StartCoroutine(CoyoteJumpDelay());
+			}
 
 		}
 
 	}
 
-	public void Move(float move, bool jump, bool downDash, bool decrementGravity)
+	public void Move(float move, bool jump, bool downDash)
 	{
 
 		//only control the player if grounded or airControl is turned on
@@ -103,7 +111,7 @@ public class MovementController : MonoBehaviour
 			}
 
 		}
-				// If the player should jump...
+
 		if(m_Grounded)
 		{
 			if(!onePress)
@@ -113,17 +121,20 @@ public class MovementController : MonoBehaviour
 				onePress = true;
 			}
 
-			// Add a vertical force to the player.
 			if(jump)
 			{
 				m_Grounded = false;
-				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-				animator.SetTrigger("lol");
+				//StartCoroutine(MaxPressTimeJump());
+				m_Rigidbody2D.AddForce(Vector2.up * m_JumpForce);
 			}
 
-			hasTimeDash = true;
-			downDash = false;
+			if(hasTimeDash)
+				StopCoroutine(MaxPressTimeDash());
+			else
+				hasTimeDash = true;
 			
+			downDash = false;
+			//hasTimeJump = true;
 		}
 
 		if(!m_Grounded)
@@ -148,9 +159,7 @@ public class MovementController : MonoBehaviour
 				
 				m_Rigidbody2D.gravityScale = originalGravity;
 
-				m_Rigidbody2D.AddForce(new Vector2(
-					0f, -m_DashForce * 5 * timePressDash
-				));
+				m_Rigidbody2D.AddForce(Vector2.down * m_DashForce * 5 * timePressDash);
 
 				onePress = true;
 			}
@@ -159,9 +168,9 @@ public class MovementController : MonoBehaviour
 
 			if(coyoteJump && !goingUp && jump)
 			{
+				//StartCoroutine(MaxPressTimeJump());
 				m_Rigidbody2D.velocity = Vector2.zero;
 				m_Rigidbody2D.AddForce(Vector2.up * m_JumpForce);
-				animator.SetTrigger("lol");
 			}
 		}
 
@@ -193,4 +202,11 @@ public class MovementController : MonoBehaviour
 		yield return new WaitForSeconds(m_DashTime);
 		hasTimeDash = false;		
 	}
+
+	/*IEnumerator MaxPressTimeJump()
+	{
+		hasTimeJump = true;
+		yield return new WaitForSeconds(m_JumpTime);
+		hasTimeJump = false;
+	}*/
 }

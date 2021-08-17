@@ -6,8 +6,10 @@ Shader "MyShaders/GlamPink"
     }
     SubShader
     {
-        // No culling or depth
-        Cull Off ZWrite Off ZTest Always
+        Tags
+        {
+            "Queue" = "Background"
+        }
 
         Pass
         {
@@ -100,7 +102,8 @@ Shader "MyShaders/GlamPink"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed2 uv = i.texcoord;
+                //fixed2 uv = i.texcoord;
+                fixed2 uv = (2.0 * i.vertex - _ScreenParams.xy) / min(_ScreenParams.x, _ScreenParams.y);
                 float shade = pattern(uv);
                 fixed4 fragColor = fixed4(colormap(shade).rgb, shade);
                 

@@ -55,7 +55,8 @@ Shader "MyShaders/Glowing Blue"
             }
 
             fixed4 frag (v2f i) : SV_Target {
-                fixed2 uv = i.texcoord;
+                //fixed2 uv = i.texcoord;
+                fixed2 uv = (2.0 * i.vertex - _ScreenParams.xy) / min(_ScreenParams.x, _ScreenParams.y);
                 
                 uv *= 4.5; // Scale UV to make it nicer in that big screen !
                 float displacement = pattern(uv);

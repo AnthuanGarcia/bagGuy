@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Warp70s
-  m_Shader: {fileID: 4800000, guid: e3d30dfc43ca4014a831da42d16c5081, type: 3}
+  m_Name: StaticNoise
+  m_Shader: {fileID: 4800000, guid: e24753e2169389f4ca25bb826cca30bf, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

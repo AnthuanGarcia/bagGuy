@@ -9,6 +9,7 @@ TagManager:
   - BigDoor
   - VirtualCamera
   - SpawnTrigger
+  - MovilPlatforms
   layers:
   - Default
   - TransparentFX

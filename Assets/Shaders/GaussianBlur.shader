@@ -154,6 +154,8 @@ Shader "MyShaders/GaussianBlur"
                 #pragma fragment frag
                 #pragma fragmentoption ARB_precision_hint_fastest
                 #include "UnityCG.cginc"
+
+                #define Pi 6.28318530718
                
                 struct appdata_t {
                     float4 vertex : POSITION;
@@ -193,6 +195,27 @@ Shader "MyShaders/GaussianBlur"
                 sampler2D _MainTex;
                
                 half4 frag( v2f i ) : COLOR {
+                    /*float Directions = 10.0; // BLUR DIRECTIONS (Default 16.0 - More is better but slower)
+                    float Quality = 3.5; // BLUR QUALITY (Default 4.0 - More is better but slower)
+                    float Size = 8.0;
+
+                    float2 Radius = Size / _ScreenParams.xy;
+                    float2 uv = i.vertex / _ScreenParams.xy;
+
+                    half4 color = tex2Dproj( _GrabTexture, UNITY_PROJ_COORD(i.uvgrab));
+
+                    for( float d=0.0; d<Pi; d+=Pi/Directions)
+                    {
+                        for(float i=1.0/Quality; i<=1.0; i+=1.0/Quality)
+                        {
+                            color += tex2D(_GrabTexture, uv+fixed2(cos(d),sin(d))*Radius*i);
+                        }
+                    }
+
+                    color /= Quality * Directions - 15.0;
+
+                    return color;*/
+
                     // calculate perturbed coordinates
                     half2 bump = UnpackNormal(tex2D( _BumpMap, i.uvbump )).rg; // we could optimize this by just reading the x  y without reconstructing the Z
                     float2 offset = bump * _BumpAmt * _GrabTexture_TexelSize.xy;
@@ -202,6 +225,24 @@ Shader "MyShaders/GaussianBlur"
                     half4 tint = tex2D( _MainTex, i.uvmain ) * _Color;
                    
                     return col * tint;
+
+                    /*float direction = 10.0;
+                    float2 uv = i.vertex / _ScreenParams.xy;
+
+                    half4 color = tex2Dproj( _GrabTexture, UNITY_PROJ_COORD(i.uvgrab));
+                    fixed2 off1 = fixed2(1.411764705882353, 1.411764705882353) * direction;
+                    fixed2 off2 = fixed2(3.2941176470588234, 3.2941176470588234) * direction;
+                    fixed2 off3 = fixed2(5.176470588235294, 5.176470588235294) * direction;
+
+                    color += tex2D(_GrabTexture, uv) * 0.1964825501511404;
+                    color += tex2D(_GrabTexture, uv + (off1 / _ScreenParams.xy)) * 0.2969069646728344;
+                    color += tex2D(_GrabTexture, uv - (off1 / _ScreenParams.xy)) * 0.2969069646728344;
+                    color += tex2D(_GrabTexture, uv + (off2 / _ScreenParams.xy)) * 0.09447039785044732;
+                    color += tex2D(_GrabTexture, uv - (off2 / _ScreenParams.xy)) * 0.09447039785044732;
+                    color += tex2D(_GrabTexture, uv + (off3 / _ScreenParams.xy)) * 0.010381362401148057;
+                    color += tex2D(_GrabTexture, uv - (off3 / _ScreenParams.xy)) * 0.010381362401148057;
+
+                    return color;*/
                 }
                 ENDCG
             }

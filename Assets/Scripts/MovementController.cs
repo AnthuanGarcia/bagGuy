@@ -43,6 +43,7 @@ public class MovementController : MonoBehaviour
 	bool onePress = true;
 	/* ------------------- */
 	//bool hasTimeJump;
+	bool hasDash = true;
 
 	private void Awake()
 	{
@@ -86,14 +87,16 @@ public class MovementController : MonoBehaviour
 
 	}
 
-	public void Move(float move, bool jump, bool downDash)
+	public void Move(float move, bool jump, bool downDash, bool horizontalDash)
 	{
 
 		//only control the player if grounded or airControl is turned on
 		if (m_Grounded || m_AirControl)
 		{
+			float force = m_Grounded ? 10f : 15f;
+
 			// Move the character by finding the target velocity
-			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
+			Vector3 targetVelocity = new Vector2(move * force, m_Rigidbody2D.velocity.y);
 			// And then smoothing it out and applying it to the character
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
@@ -134,11 +137,20 @@ public class MovementController : MonoBehaviour
 				hasTimeDash = true;
 			
 			downDash = false;
+			hasDash = true;
 			//hasTimeJump = true;
 		}
 
 		if(!m_Grounded)
 		{
+			if(horizontalDash && hasDash)
+			{
+				float sign = m_FacingRight ? 1 : -1;
+				m_Rigidbody2D.velocity = Vector2.zero;
+				m_Rigidbody2D.AddRelativeForce(new Vector2(650f * sign, 210f));
+				hasDash = false;
+			}
+
 			if(downDash && hasTimeDash) 
 			{
 				if(onePress)

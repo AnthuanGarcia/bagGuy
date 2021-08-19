@@ -181,11 +181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6c373f5ee0b5e40b004da4822d50a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 450
-  m_DashForce: 500
+  m_JumpForce: 420
+  m_DashForce: 90
   m_DashTime: 2
   m_MovementSmoothing: 0.08
-  m_CoyoteTime: 0.25
+  m_CoyoteTime: 0.15
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
@@ -287,4 +287,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementController: {fileID: 8061639494104886902}
-  speed: 14.5
+  speed: 16

@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     bool jump = false;
     bool dash = false;
+    bool horizontalDash = false;
     float horizontalMove;
 
     // Start is called before the first frame update
@@ -32,6 +33,9 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonUp("Vertical"))
             dash = false;
+
+        if(Input.GetKeyDown(KeyCode.M))
+            horizontalDash = true;
         
         UpdateState();
     }
@@ -42,10 +46,11 @@ public class PlayerMovement : MonoBehaviour
         movementController.Move(
             horizontalMove * Time.fixedDeltaTime,
             jump,
-            dash
+            dash,
+            horizontalDash
         );
 
-        jump = false;
+        horizontalDash = jump = false;
     }
 
     public void OnLanding()

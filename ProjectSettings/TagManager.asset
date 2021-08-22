@@ -10,6 +10,7 @@ TagManager:
   - VirtualCamera
   - SpawnTrigger
   - MovilPlatforms
+  - Background
   layers:
   - Default
   - TransparentFX
@@ -53,11 +54,11 @@ TagManager:
   - name: Decoration
     uniqueID: 1556345977
     locked: 0
-  - name: Layout
-    uniqueID: 1598525229
-    locked: 0
   - name: Characters
     uniqueID: 1909772249
+    locked: 0
+  - name: Layout
+    uniqueID: 1598525229
     locked: 0
   - name: OverDeco
     uniqueID: 3580906103

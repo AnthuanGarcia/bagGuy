@@ -170,8 +170,7 @@ public class MovementController : MonoBehaviour
 				timePressDash = Time.time - startTime;
 				
 				m_Rigidbody2D.gravityScale = originalGravity;
-				m_Rigidbody2D.velocity = Vector2.zero;
-				m_Rigidbody2D.AddForce(Vector2.down * m_DashForce * 5 * timePressDash);
+				m_Rigidbody2D.velocity = Vector2.down * m_DashForce * timePressDash;				
 
 				onePress = true;
 			}

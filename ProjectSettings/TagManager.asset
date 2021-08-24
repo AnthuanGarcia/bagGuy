@@ -11,6 +11,7 @@ TagManager:
   - SpawnTrigger
   - MovilPlatforms
   - Background
+  - AntiFall
   layers:
   - Default
   - TransparentFX

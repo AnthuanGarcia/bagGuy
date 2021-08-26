@@ -30,8 +30,11 @@ public class MovementController : MonoBehaviour
 
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
-
 	public BoolEvent OnCrouchEvent;
+
+	[System.Serializable]
+	public class DashEvent : UnityEvent<Vector3> { }
+	public DashEvent OnDashEvent;
     Animator animator;
 	bool coyoteJump;
 
@@ -44,6 +47,7 @@ public class MovementController : MonoBehaviour
 	/* ------------------- */
 	//bool hasTimeJump;
 	bool hasDash = true;
+	WaveExplosionPost effect;
 
 	private void Awake()
 	{
@@ -56,6 +60,11 @@ public class MovementController : MonoBehaviour
 
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
+	}
+
+	private void Start()
+	{
+		effect = WaveExplosionPost.Get();
 	}
 
 	private void FixedUpdate()
@@ -145,6 +154,9 @@ public class MovementController : MonoBehaviour
 		{
 			if(horizontalDash && hasDash)
 			{
+				//Vector2 pos = Camera.main.WorldToScreenPoint(transform.position);
+				//if(OnDashEvent != null) OnDashEvent.Invoke(Camera.main.WorldToScreenPoint(transform.position));
+				effect.StartIt(Camera.main.WorldToScreenPoint(transform.position));
 				float sign = m_FacingRight ? 1 : -1;
 				m_Rigidbody2D.velocity = Vector2.zero;
 				m_Rigidbody2D.AddRelativeForce(new Vector2(650f * sign, 210f));

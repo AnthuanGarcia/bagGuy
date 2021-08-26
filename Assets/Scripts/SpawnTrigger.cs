@@ -15,12 +15,12 @@ public class SpawnTrigger : MonoBehaviour
         if(restartEntryPoint == null)
             restartEntryPoint = new UnityEvent();
     }
-    
+
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.CompareTag("Player"))
+        if (collider.CompareTag("Player"))
         {
-            if(restart)
+            if (restart)
             {
                 restartPlatform.Invoke();
                 restartEntryPoint.Invoke();

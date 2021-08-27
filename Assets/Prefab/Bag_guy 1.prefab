@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_JumpForce: 420
-  m_DashForce: 90
+  m_DashForce: 12
   m_DashTime: 2
   m_MovementSmoothing: 0.08
   m_CoyoteTime: 0.15
@@ -208,6 +208,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDashEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!50 &3367121842859887999

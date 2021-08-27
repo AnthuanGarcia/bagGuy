@@ -35,7 +35,6 @@ Shader "MyShaders/Gradient"
                 struct v2f {
                     float4 vertex : POSITION;
                     float4 uvgrab : TEXCOORD0;
-                    float2 uvbump : TEXCOORD1;
                     float2 uvmain : TEXCOORD2;
                 };
 

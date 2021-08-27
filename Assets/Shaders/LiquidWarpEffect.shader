@@ -41,7 +41,9 @@ Shader "MyShaders/LiquidWarpEffect"
 
 			//Our Fragment Shader
 			fixed4 frag (v2f i) : COLOR{
-                float waveSpeed = 0.15;
+                float waveSpeed = 0.5;
+                float wavesize = 0.08;
+
 				float2 diff = float2(_CenterX/_ScreenParams.x, _CenterY/_ScreenParams.y);
 				float2 distVec = i.uv - diff;
                 float aspectRatio = _ScreenParams.x/_ScreenParams.y;
@@ -50,11 +52,10 @@ Shader "MyShaders/LiquidWarpEffect"
 
 				float2 uv_displaced = i.uv;
 
-				float wavesize = 0.1;
 				if (dist>_Radius) {
 					if (dist<_Radius+wavesize) {
-                        float multiplier = (dist < 0.75) ? ((dist-1.0)*(dist-1.0)) : 0.0;
-						float angle=(dist-_Radius)*0.5*3.141592654/wavesize;
+                        float multiplier = (dist < 0.5) ? ((dist-1.0)*(dist-1.0)) : 0.0;
+						float angle=(dist-_Radius)*2.0*3.141592654/wavesize;
 						float cossin=(1.0-cos(angle))*0.5;
 						uv_displaced.x-=cossin*diff.x*_Amplitude/dist * waveSpeed * multiplier;
 						uv_displaced.y-=cossin*diff.y*_Amplitude/dist * waveSpeed * multiplier;

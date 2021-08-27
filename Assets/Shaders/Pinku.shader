@@ -6,6 +6,8 @@ Shader "MyShaders/GlamPink"
     }
     SubShader
     {
+        Cull Off ZWrite Off ZTest Always
+        
         Tags
         {
             "Queue" = "Background"
@@ -14,13 +16,27 @@ Shader "MyShaders/GlamPink"
         Pass
         {
             CGPROGRAM
-            #pragma vertex SpriteVert
-            #pragma fragment frag // we've changed the name of the func to "frag". The implementation can be found below
-            #pragma target 2.0
-            #pragma multi_compile_instancing
-            #pragma multi_compile_local _ PIXELSNAP_ON
-            #pragma multi_compile _ ETC1_EXTERNAL_ALPHA
-            #include "UnitySprites.cginc"
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma fragmentoption ARB_precision_hint_fastest
+            #include "UnityCG.cginc"
+
+            struct appdata_t {
+                float4 vertex : POSITION;
+                float2 texcoord: TEXCOORD0;
+            };
+
+            struct v2f {
+                float4 vertex : POSITION;
+            };
+
+            float4 _MainTex_ST;
+
+            v2f vert (appdata_t v) {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                return o;
+            }
 
             float colormap_red(float x) {
                 if (x < 0.0) {

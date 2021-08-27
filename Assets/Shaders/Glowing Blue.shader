@@ -24,25 +24,13 @@ Shader "MyShaders/Glowing Blue"
 
             struct v2f {
                 float4 vertex : POSITION;
-                float4 uvgrab : TEXCOORD0;
-                float2 uvbump : TEXCOORD1;
-                float2 uvmain : TEXCOORD2;
             };
 
             float4 _MainTex_ST;
-            sampler2D _MainTex;
 
             v2f vert (appdata_t v) {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                #if UNITY_UV_STARTS_AT_TOP
-                float scale = -1.0;
-                #else
-                float scale = 1.0;
-                #endif
-                o.uvgrab.xy = (float2(o.vertex.x, o.vertex.y*scale) + o.vertex.w) * 0.5;
-                o.uvgrab.zw = o.vertex.zw;
-                o.uvmain = TRANSFORM_TEX( v.texcoord, _MainTex );
                 return o;
             }
 

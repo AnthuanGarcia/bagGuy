@@ -10,6 +10,8 @@ public class BackScreenSize : MonoBehaviour
 
     Vector2 originalSize;
     bool reduce = false;
+    float widthRed = 6f;
+    float heightRed = 4f;
 
     // Start is called before the first frame update
     void Start()
@@ -40,8 +42,8 @@ public class BackScreenSize : MonoBehaviour
         if(reduce)
         {
             transform.localScale = new Vector2(
-                Mathf.Lerp(transform.localScale.x, 6f, Time.fixedDeltaTime * resizeSpeed),
-                Mathf.Lerp(transform.localScale.y, 4f, Time.fixedDeltaTime * resizeSpeed)
+                Mathf.Lerp(transform.localScale.x, widthRed, Time.fixedDeltaTime * resizeSpeed),
+                Mathf.Lerp(transform.localScale.y, heightRed, Time.fixedDeltaTime * resizeSpeed)
             );
 
             transform.position = new Vector2(
@@ -69,9 +71,11 @@ public class BackScreenSize : MonoBehaviour
         }
     }
 
-    public void ReduceSize()
+    public void ReduceSize(float wid, float hei, bool redu)
     {
-        reduce = !reduce;
+        widthRed = wid;
+        heightRed = hei;
+        reduce = redu;
     }
 
 }

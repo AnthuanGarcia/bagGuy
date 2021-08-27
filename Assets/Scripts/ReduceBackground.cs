@@ -3,19 +3,20 @@ using UnityEngine.Events;
 
 public class ReduceBackground : MonoBehaviour
 {
-    public UnityEvent OnResizeBackgroundEvent;
+    public float width = 6f;
+    public float height = 4f;
+    public bool reduce = false;
 
-    void Awake()
-    {
-        if(OnResizeBackgroundEvent == null)
-            OnResizeBackgroundEvent = new UnityEvent();
-    }
+	[System.Serializable]
+    public class ResizeBakgroundEvent : UnityEvent<float, float, bool> { }
+    public ResizeBakgroundEvent OnResizeBackgroundEvent;
 
     void OnTriggerExit2D(Collider2D col)
     {
         if(col.gameObject.CompareTag("Player"))
         {
-            OnResizeBackgroundEvent.Invoke();
+            if(OnResizeBackgroundEvent != null)
+                OnResizeBackgroundEvent.Invoke(width, height, reduce);
         }
     }
 }

@@ -152,15 +152,18 @@ public class MovementController : MonoBehaviour
 
 		if(!m_Grounded)
 		{
+			animator.SetBool("isDashing", horizontalDash && hasDash);
+
 			if(horizontalDash && hasDash)
 			{
 				//Vector2 pos = Camera.main.WorldToScreenPoint(transform.position);
 				//if(OnDashEvent != null) OnDashEvent.Invoke(Camera.main.WorldToScreenPoint(transform.position));
-				effect.StartIt(Camera.main.WorldToScreenPoint(transform.position));
 				float sign = m_FacingRight ? 1 : -1;
 				m_Rigidbody2D.velocity = Vector2.zero;
 				m_Rigidbody2D.AddRelativeForce(new Vector2(650f * sign, 210f));
 				hasDash = false;
+
+				effect.StartIt(Camera.main.WorldToScreenPoint(transform.position));
 			}
 
 			if(downDash && hasTimeDash) 

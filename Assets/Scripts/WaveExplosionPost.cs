@@ -24,7 +24,7 @@ public class WaveExplosionPost : MonoBehaviour
 		mat.SetFloat("_CenterY",Mathf.Round(center.y - 25f));
 		radius=0f;
 
-		GoTweenConfig config=new GoTweenConfig().floatProp("radius",0.85f);
+		GoTweenConfig config=new GoTweenConfig().floatProp("radius",1.6f);
 		//config.easeType=GoEaseType.ExpoOut;
 		//config.onComplete(HandleComplete);
 		Go.to(this,1f,config);

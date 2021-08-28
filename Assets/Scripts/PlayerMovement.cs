@@ -5,8 +5,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public MovementController movementController;
     public float speed = 40f;
+    public static bool canMove = true;
+    
     Animator animator;
-
     bool jump = false;
     bool dash = false;
     bool horizontalDash = false;
@@ -21,23 +22,25 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
+        if(canMove)
+        {
+            horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
 
-        if(Input.GetButtonDown("Jump"))
-            jump = true;
+            if(Input.GetButtonDown("Jump"))
+                jump = true;
 
-        if(Input.GetButtonDown("Vertical") &&
-            Mathf.Approximately(Input.GetAxisRaw("Vertical"), -1))
-            dash = true;
+            if(Input.GetButtonDown("Vertical") &&
+                Mathf.Approximately(Input.GetAxisRaw("Vertical"), -1))
+                dash = true;
 
-        if(Input.GetButtonUp("Vertical"))
-            dash = false;
+            if(Input.GetButtonUp("Vertical"))
+                dash = false;
 
-        if(Input.GetKeyDown(KeyCode.M))
-            horizontalDash = true;
-        
-        UpdateState();
+            if(Input.GetKeyDown(KeyCode.M))
+                horizontalDash = true;
+            
+            UpdateState();
+        }
     }
 
     void FixedUpdate()

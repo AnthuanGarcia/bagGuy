@@ -12,6 +12,8 @@ TagManager:
   - MovilPlatforms
   - Background
   - AntiFall
+  - CursorTxt
+  - PartBackground
   layers:
   - Default
   - TransparentFX

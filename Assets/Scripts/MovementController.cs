@@ -7,6 +7,7 @@ public class MovementController : MonoBehaviour
     [SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
 	[SerializeField] private float m_DashForce = 300f;							// Amount of force added when the player jumps.
 	[SerializeField] private float m_DashTime = 2f;
+	[SerializeField] private float m_MaxVelocity = 75f;
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[Range(0, 2f)][SerializeField] private float m_CoyoteTime = 0.25f;
 	//[Range(0, 2f)][SerializeField]private float m_JumpTime = 0.5f; 
@@ -48,6 +49,7 @@ public class MovementController : MonoBehaviour
 	//bool hasTimeJump;
 	bool hasDash = true;
 	WaveExplosionPost effect;
+	float sqrMaxVel;
 
 	private void Awake()
 	{
@@ -60,6 +62,8 @@ public class MovementController : MonoBehaviour
 
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
+
+		sqrMaxVel = m_MaxVelocity * m_MaxVelocity;
 	}
 
 	private void Start()
@@ -152,6 +156,19 @@ public class MovementController : MonoBehaviour
 
 		if(!m_Grounded)
 		{
+			if(m_Rigidbody2D.velocity.magnitude > m_MaxVelocity)
+			{
+				//float sign = verticalSpeed >= 0 ? -1 : 1;
+
+				/*m_Rigidbody2D.velocity = Vector2.Lerp(
+					m_Rigidbody2D.velocity,
+					Vector2.zero,
+					Time.fixedDeltaTime * 30
+				);*/
+
+				m_Rigidbody2D.velocity = Vector2.ClampMagnitude(m_Rigidbody2D.velocity, m_MaxVelocity);
+			}
+
 			animator.SetBool("isDashing", horizontalDash && hasDash);
 
 			if(horizontalDash && hasDash)

@@ -159,8 +159,7 @@ TextureImporter:
       - - {x: -16, y: -15}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: 0}
-        - {x: 14, y: 0}
+        - {x: 16, y: 1}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -182,11 +181,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 14, y: 16}
+      - - {x: 16, y: 16}
+        - {x: 14, y: 16}
         - {x: -16, y: 1}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: 16}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -208,11 +207,10 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 14, y: -5}
+      - - {x: 16, y: -4}
         - {x: -16, y: -15}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: -5}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -236,8 +234,7 @@ TextureImporter:
       outline:
       - - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: 6}
-        - {x: 15, y: 6}
+        - {x: 16, y: 7}
         - {x: -16, y: -4}
       physicsShape: []
       tessellationDetail: 0
@@ -261,7 +258,7 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 13, y: 16}
-        - {x: -16, y: 6}
+        - {x: -16, y: 7}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
@@ -286,11 +283,10 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 12, y: -8}
+      - - {x: 16, y: -7}
         - {x: -16, y: -15}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: -8}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -312,11 +308,10 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 12, y: 0}
+      - - {x: 16, y: 1}
         - {x: -16, y: -7}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: 0}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -338,11 +333,10 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 12, y: 8}
+      - - {x: 16, y: 9}
         - {x: -16, y: 1}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: 8}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -394,7 +388,6 @@ TextureImporter:
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: -9}
-        - {x: 14, y: -9}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -416,12 +409,10 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 12, y: -3}
-        - {x: -13, y: -8}
+      - - {x: 16, y: -3}
         - {x: -16, y: -9}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: -3}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -446,8 +437,7 @@ TextureImporter:
       - - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 4}
-        - {x: 15, y: 4}
-        - {x: -16, y: -2}
+        - {x: -16, y: -3}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -469,11 +459,10 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 13, y: 10}
+      - - {x: 16, y: 11}
         - {x: -16, y: 4}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: 10}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -495,9 +484,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 11, y: 16}
-        - {x: -14, y: 11}
-        - {x: -16, y: 10}
+      - - {x: -16, y: 11}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}

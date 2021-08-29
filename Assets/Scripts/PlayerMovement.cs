@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static bool canMove = true;
     public MovementController movementController;
     public float speed = 40f;
-    public static bool canMove = true;
     
     Animator animator;
     bool jump = false;

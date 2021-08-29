@@ -1,0 +1,956 @@
+fileFormatVersion: 2
+guid: a35d2a402d4c7c84aab15c15c7b7f777
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7707952970873406415
+    second: bouncy_waves_filled_0
+  - first:
+      213: -8862991492076116309
+    second: bouncy_waves_filled_1
+  - first:
+      213: 1909275506494761508
+    second: bouncy_waves_filled_2
+  - first:
+      213: 6849473946991992572
+    second: bouncy_waves_filled_3
+  - first:
+      213: 2446548034921340928
+    second: bouncy_waves_filled_4
+  - first:
+      213: 4313822334446877211
+    second: bouncy_waves_filled_5
+  - first:
+      213: 3257223391745067895
+    second: bouncy_waves_filled_6
+  - first:
+      213: 5874004608218868430
+    second: bouncy_waves_filled_7
+  - first:
+      213: 2357191317037945160
+    second: bouncy_waves_filled_8
+  - first:
+      213: -4363998322055734455
+    second: bouncy_waves_filled_9
+  - first:
+      213: 3569153170967808603
+    second: bouncy_waves_filled_10
+  - first:
+      213: 2425538108121623473
+    second: bouncy_waves_filled_11
+  - first:
+      213: -2078707920284035083
+    second: bouncy_waves_filled_12
+  - first:
+      213: -7169621333848941157
+    second: bouncy_waves_filled_13
+  - first:
+      213: 8401789018124441909
+    second: bouncy_waves_filled_14
+  - first:
+      213: 747015094002578629
+    second: bouncy_waves_filled_15
+  - first:
+      213: -6434419552554300071
+    second: bouncy_waves_filled_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bouncy_waves_filled_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: -16, y: 1}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: fc38356736628fa60800000000000000
+      internalID: 7707952970873406415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 2}
+        - {x: 1, y: 2}
+        - {x: 1, y: 1}
+        - {x: -1, y: 1}
+        - {x: -1, y: 2}
+        - {x: -3, y: 2}
+        - {x: -3, y: 1}
+        - {x: -16, y: 1}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: 3, y: 1}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: ba66e733234500580800000000000000
+      internalID: -8862991492076116309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 3}
+        - {x: 3, y: 3}
+        - {x: 3, y: 2}
+        - {x: 1, y: 2}
+        - {x: 1, y: 1}
+        - {x: -1, y: 1}
+        - {x: -1, y: 2}
+        - {x: -3, y: 2}
+        - {x: -3, y: 3}
+        - {x: -5, y: 3}
+        - {x: -5, y: 2}
+        - {x: -6, y: 2}
+        - {x: -6, y: 1}
+        - {x: -16, y: 1}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: 6, y: 1}
+        - {x: 6, y: 2}
+        - {x: 5, y: 2}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 42a69f615fb1f7a10800000000000000
+      internalID: 1909275506494761508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 4}
+        - {x: 6, y: 4}
+        - {x: 6, y: 5}
+        - {x: 4, y: 5}
+        - {x: 4, y: 4}
+        - {x: 3, y: 4}
+        - {x: 3, y: 2}
+        - {x: 1, y: 2}
+        - {x: 1, y: 1}
+        - {x: -1, y: 1}
+        - {x: -1, y: 2}
+        - {x: -3, y: 2}
+        - {x: -3, y: 4}
+        - {x: -4, y: 4}
+        - {x: -4, y: 5}
+        - {x: -6, y: 5}
+        - {x: -6, y: 4}
+        - {x: -7, y: 4}
+        - {x: -7, y: 2}
+        - {x: -8, y: 2}
+        - {x: -8, y: 1}
+        - {x: -16, y: 1}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: 8, y: 1}
+        - {x: 8, y: 2}
+        - {x: 7, y: 2}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: cfe10c4c3483e0f50800000000000000
+      internalID: 6849473946991992572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 5}
+        - {x: 7, y: 5}
+        - {x: 7, y: 6}
+        - {x: 4, y: 6}
+        - {x: 4, y: 5}
+        - {x: 3, y: 5}
+        - {x: 3, y: 2}
+        - {x: 1, y: 2}
+        - {x: 1, y: 1}
+        - {x: -1, y: 1}
+        - {x: -1, y: 2}
+        - {x: -3, y: 2}
+        - {x: -3, y: 5}
+        - {x: -4, y: 5}
+        - {x: -4, y: 6}
+        - {x: -7, y: 6}
+        - {x: -7, y: 5}
+        - {x: -8, y: 5}
+        - {x: -8, y: 2}
+        - {x: -9, y: 2}
+        - {x: -9, y: 1}
+        - {x: -16, y: 1}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: 9, y: 1}
+        - {x: 9, y: 2}
+        - {x: 8, y: 2}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 000aa63b972e3f120800000000000000
+      internalID: 2446548034921340928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 2}
+        - {x: 10, y: 4}
+        - {x: 9, y: 4}
+        - {x: 9, y: 6}
+        - {x: 8, y: 6}
+        - {x: 8, y: 7}
+        - {x: 5, y: 7}
+        - {x: 5, y: 6}
+        - {x: 4, y: 6}
+        - {x: 4, y: 4}
+        - {x: 3, y: 4}
+        - {x: 3, y: 2}
+        - {x: 1, y: 2}
+        - {x: 1, y: 1}
+        - {x: -1, y: 1}
+        - {x: -1, y: 2}
+        - {x: -3, y: 2}
+        - {x: -3, y: 4}
+        - {x: -4, y: 4}
+        - {x: -4, y: 6}
+        - {x: -5, y: 6}
+        - {x: -5, y: 7}
+        - {x: -8, y: 7}
+        - {x: -8, y: 6}
+        - {x: -9, y: 6}
+        - {x: -9, y: 4}
+        - {x: -10, y: 4}
+        - {x: -10, y: 2}
+        - {x: -11, y: 2}
+        - {x: -11, y: 1}
+        - {x: -16, y: 1}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: 11, y: 1}
+        - {x: 11, y: 2}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: b1a3adcbe86cddb30800000000000000
+      internalID: 4313822334446877211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 2}
+        - {x: 11, y: 4}
+        - {x: 10, y: 4}
+        - {x: 10, y: 6}
+        - {x: 9, y: 6}
+        - {x: 9, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 9}
+        - {x: 6, y: 9}
+        - {x: 6, y: 8}
+        - {x: 5, y: 8}
+        - {x: 5, y: 6}
+        - {x: 4, y: 6}
+        - {x: 4, y: 4}
+        - {x: 3, y: 4}
+        - {x: 3, y: 2}
+        - {x: 1, y: 2}
+        - {x: 1, y: 1}
+        - {x: -1, y: 1}
+        - {x: -1, y: 2}
+        - {x: -3, y: 2}
+        - {x: -3, y: 4}
+        - {x: -4, y: 4}
+        - {x: -4, y: 6}
+        - {x: -5, y: 6}
+        - {x: -5, y: 8}
+        - {x: -6, y: 8}
+        - {x: -6, y: 9}
+        - {x: -8, y: 9}
+        - {x: -8, y: 8}
+        - {x: -9, y: 8}
+        - {x: -9, y: 6}
+        - {x: -10, y: 6}
+        - {x: -10, y: 4}
+        - {x: -11, y: 4}
+        - {x: -11, y: 2}
+        - {x: -12, y: 2}
+        - {x: -12, y: 1}
+        - {x: -16, y: 1}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: 12, y: 1}
+        - {x: 12, y: 2}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 77bce03da6bf33d20800000000000000
+      internalID: 3257223391745067895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 8}
+        - {x: 11, y: 8}
+        - {x: 11, y: 9}
+        - {x: 10, y: 9}
+        - {x: 10, y: 10}
+        - {x: 7, y: 10}
+        - {x: 7, y: 9}
+        - {x: 6, y: 9}
+        - {x: 6, y: 8}
+        - {x: 5, y: 8}
+        - {x: 5, y: 6}
+        - {x: 4, y: 6}
+        - {x: 4, y: 4}
+        - {x: 3, y: 4}
+        - {x: 3, y: 2}
+        - {x: 1, y: 2}
+        - {x: 1, y: 1}
+        - {x: -1, y: 1}
+        - {x: -1, y: 2}
+        - {x: -3, y: 2}
+        - {x: -3, y: 4}
+        - {x: -4, y: 4}
+        - {x: -4, y: 6}
+        - {x: -5, y: 6}
+        - {x: -5, y: 8}
+        - {x: -6, y: 8}
+        - {x: -6, y: 9}
+        - {x: -7, y: 9}
+        - {x: -7, y: 10}
+        - {x: -10, y: 10}
+        - {x: -10, y: 9}
+        - {x: -11, y: 9}
+        - {x: -11, y: 8}
+        - {x: -12, y: 8}
+        - {x: -12, y: 6}
+        - {x: -13, y: 6}
+        - {x: -13, y: 4}
+        - {x: -14, y: 4}
+        - {x: -14, y: 2}
+        - {x: -15, y: 2}
+        - {x: -15, y: 1}
+        - {x: -16, y: 1}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: 15, y: 1}
+        - {x: 15, y: 2}
+        - {x: 14, y: 2}
+        - {x: 14, y: 4}
+        - {x: 13, y: 4}
+        - {x: 13, y: 6}
+        - {x: 12, y: 6}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: ecaa4e1c118a48150800000000000000
+      internalID: 5874004608218868430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 8}
+        - {x: 11, y: 9}
+        - {x: 10, y: 9}
+        - {x: 10, y: 10}
+        - {x: 7, y: 10}
+        - {x: 7, y: 9}
+        - {x: 6, y: 9}
+        - {x: 6, y: 8}
+        - {x: 5, y: 8}
+        - {x: 5, y: 6}
+        - {x: 4, y: 6}
+        - {x: 4, y: 4}
+        - {x: 3, y: 4}
+        - {x: 3, y: 1}
+        - {x: -3, y: 1}
+        - {x: -3, y: 4}
+        - {x: -4, y: 4}
+        - {x: -4, y: 6}
+        - {x: -5, y: 6}
+        - {x: -5, y: 8}
+        - {x: -6, y: 8}
+        - {x: -6, y: 9}
+        - {x: -7, y: 9}
+        - {x: -7, y: 10}
+        - {x: -10, y: 10}
+        - {x: -10, y: 9}
+        - {x: -11, y: 9}
+        - {x: -11, y: 8}
+        - {x: -12, y: 8}
+        - {x: -12, y: 6}
+        - {x: -13, y: 6}
+        - {x: -13, y: 4}
+        - {x: -14, y: 4}
+        - {x: -14, y: 2}
+        - {x: -15, y: 2}
+        - {x: -15, y: 1}
+        - {x: -16, y: 1}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: 15, y: 1}
+        - {x: 15, y: 2}
+        - {x: 14, y: 2}
+        - {x: 14, y: 4}
+        - {x: 13, y: 4}
+        - {x: 13, y: 6}
+        - {x: 12, y: 6}
+        - {x: 12, y: 8}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 8419eaf830d66b020800000000000000
+      internalID: 2357191317037945160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 5}
+        - {x: 12, y: 5}
+        - {x: 12, y: 7}
+        - {x: 11, y: 7}
+        - {x: 11, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 7}
+        - {x: 7, y: 7}
+        - {x: 7, y: 5}
+        - {x: 6, y: 5}
+        - {x: 6, y: 3}
+        - {x: 5, y: 3}
+        - {x: 5, y: 1}
+        - {x: -5, y: 1}
+        - {x: -5, y: 3}
+        - {x: -6, y: 3}
+        - {x: -6, y: 5}
+        - {x: -7, y: 5}
+        - {x: -7, y: 7}
+        - {x: -8, y: 7}
+        - {x: -8, y: 8}
+        - {x: -11, y: 8}
+        - {x: -11, y: 7}
+        - {x: -12, y: 7}
+        - {x: -12, y: 5}
+        - {x: -13, y: 5}
+        - {x: -13, y: 3}
+        - {x: -14, y: 3}
+        - {x: -14, y: 1}
+        - {x: -16, y: 1}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: 14, y: 1}
+        - {x: 14, y: 3}
+        - {x: 13, y: 3}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 94b9775c5a6ff63c0800000000000000
+      internalID: -4363998322055734455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 3}
+        - {x: 14, y: 3}
+        - {x: 14, y: 5}
+        - {x: 13, y: 5}
+        - {x: 13, y: 6}
+        - {x: 12, y: 6}
+        - {x: 12, y: 7}
+        - {x: 10, y: 7}
+        - {x: 10, y: 6}
+        - {x: 9, y: 6}
+        - {x: 9, y: 5}
+        - {x: 8, y: 5}
+        - {x: 8, y: 3}
+        - {x: 7, y: 3}
+        - {x: 7, y: 1}
+        - {x: -7, y: 1}
+        - {x: -7, y: 3}
+        - {x: -8, y: 3}
+        - {x: -8, y: 5}
+        - {x: -9, y: 5}
+        - {x: -9, y: 6}
+        - {x: -10, y: 6}
+        - {x: -10, y: 7}
+        - {x: -12, y: 7}
+        - {x: -12, y: 6}
+        - {x: -13, y: 6}
+        - {x: -13, y: 5}
+        - {x: -14, y: 5}
+        - {x: -14, y: 3}
+        - {x: -15, y: 3}
+        - {x: -15, y: 1}
+        - {x: -16, y: 1}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: 15, y: 1}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: b5ace7816ed288130800000000000000
+      internalID: 3569153170967808603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 6}
+        - {x: 11, y: 5}
+        - {x: 10, y: 5}
+        - {x: 10, y: 3}
+        - {x: 9, y: 3}
+        - {x: 9, y: 1}
+        - {x: -9, y: 1}
+        - {x: -9, y: 3}
+        - {x: -10, y: 3}
+        - {x: -10, y: 5}
+        - {x: -11, y: 5}
+        - {x: -11, y: 6}
+        - {x: -14, y: 6}
+        - {x: -14, y: 5}
+        - {x: -15, y: 5}
+        - {x: -15, y: 3}
+        - {x: -16, y: 3}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 3}
+        - {x: 15, y: 3}
+        - {x: 15, y: 5}
+        - {x: 14, y: 5}
+        - {x: 14, y: 6}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 1bb23cbee0e39a120800000000000000
+      internalID: 2425538108121623473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 5}
+        - {x: 13, y: 4}
+        - {x: 12, y: 4}
+        - {x: 12, y: 2}
+        - {x: 11, y: 2}
+        - {x: 11, y: 1}
+        - {x: -11, y: 1}
+        - {x: -11, y: 2}
+        - {x: -12, y: 2}
+        - {x: -12, y: 4}
+        - {x: -13, y: 4}
+        - {x: -13, y: 5}
+        - {x: -16, y: 5}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 5}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 5f7dda3f822f623e0800000000000000
+      internalID: -2078707920284035083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 3}
+        - {x: 13, y: 3}
+        - {x: 13, y: 2}
+        - {x: 12, y: 2}
+        - {x: 12, y: 1}
+        - {x: -12, y: 1}
+        - {x: -12, y: 2}
+        - {x: -13, y: 2}
+        - {x: -13, y: 3}
+        - {x: -14, y: 3}
+        - {x: -14, y: 4}
+        - {x: -16, y: 4}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 4}
+        - {x: 14, y: 4}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: b9d1fd51263608c90800000000000000
+      internalID: -7169621333848941157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 2}
+        - {x: 13, y: 2}
+        - {x: 13, y: 1}
+        - {x: -13, y: 1}
+        - {x: -13, y: 2}
+        - {x: -14, y: 2}
+        - {x: -14, y: 3}
+        - {x: -16, y: 3}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 3}
+        - {x: 14, y: 3}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 539d51fe896299470800000000000000
+      internalID: 8401789018124441909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 2}
+        - {x: 14, y: 1}
+        - {x: -14, y: 1}
+        - {x: -14, y: 2}
+        - {x: -16, y: 2}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 2}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4f0e7254eed5a00800000000000000
+      internalID: 747015094002578629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bouncy_waves_filled_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 2}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 2}
+        - {x: 15, y: 2}
+        - {x: 15, y: 1}
+        - {x: -15, y: 1}
+        - {x: -15, y: 2}
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 95d4c2a028954b6a0800000000000000
+      internalID: -6434419552554300071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -44,7 +44,7 @@ Shader "MyShaders/StaticNoise"
 
             fixed4 noise(fixed2 texcoord)
             {
-                float G = e + _Time.y * 25.0;
+                float G = e + _Time.y * 5.0;
                 fixed2 r = (G * sin(G * texcoord.xy));
                 float val = frac(r.x * r.y * (1.0 + texcoord.x));
                 return fixed4(val, val, val, val);
@@ -53,8 +53,6 @@ Shader "MyShaders/StaticNoise"
             fixed4 frag (v2f i) : SV_Target
             {
                 float2 uv = i.vertex / _ScreenParams.xy;
-                uv.y /= _ScreenParams.x / _ScreenParams.y;
-
                 return noise(uv);
             }
             ENDCG

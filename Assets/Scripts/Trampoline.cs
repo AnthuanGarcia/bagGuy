@@ -18,7 +18,7 @@ public class Trampoline : MonoBehaviour
     {
         if(col.gameObject.CompareTag("Player"))
         {
-            lastVel = rb.velocity.y;
+            lastVel = Mathf.Abs(rb.velocity.y);
         }        
     }
 
@@ -27,7 +27,11 @@ public class Trampoline : MonoBehaviour
         if(col.gameObject.CompareTag("Player"))
         {
             animator.SetTrigger("bounce");
-            rb.AddForce(Vector2.up * Mathf.Abs(lastVel * BringForce));
+
+            if(lastVel > 10f)
+                rb.AddForce(Vector2.up * lastVel * BringForce);
+            else
+                rb.AddForce(Vector2.up * BringForce * 10f);
         }
     }
 }

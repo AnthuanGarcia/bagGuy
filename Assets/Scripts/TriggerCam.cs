@@ -3,19 +3,20 @@ using Cinemachine;
 
 public class TriggerCam : MonoBehaviour
 {
-    private CinemachineVirtualCamera vCam;
+    public CinemachineVirtualCamera newView;
+    //private CinemachineVirtualCamera main_vCam;
 
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
-        vCam = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();    
-    }
+        main_vCam = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();    
+    }*/
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.tag == "Player")
         {
-            vCam.Priority = 8;
+            newView.Priority = 12;
             //vCam.m_Lens.OrthographicSize = 1.5f;
         }
     }
@@ -24,7 +25,7 @@ public class TriggerCam : MonoBehaviour
     {
         if(col.tag == "Player")
         {
-            vCam.Priority = 11;
+            newView.Priority = 8;
             //vCam.m_Lens.OrthographicSize = 1.5f;
         }
     }

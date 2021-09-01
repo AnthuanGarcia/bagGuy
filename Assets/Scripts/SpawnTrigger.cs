@@ -5,7 +5,7 @@ public class SpawnTrigger : MonoBehaviour
 {
     public SpawnPoint point;
     public bool restart = false;
-    public UnityEvent restartPlatform, restartEntryPoint;
+    public UnityEvent restartPlatform, restartEntryPoint, restartTileBackground;
 
     void Awake()
     {
@@ -25,6 +25,9 @@ public class SpawnTrigger : MonoBehaviour
                 restartPlatform.Invoke();
                 restartEntryPoint.Invoke();
             }
+
+            if(restartTileBackground != null)
+                restartTileBackground.Invoke();
 
             point.SpawnToPosition();
         }

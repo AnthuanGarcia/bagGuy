@@ -12,7 +12,7 @@ public class Writebackground : MonoBehaviour
     GameObject[] blocks;
     GameObject cursorText;
     Text mainText, cursorTxt;
-    string word = "Who  am?";
+    const string word = "Who  am?";
     const string passStr = "me";
     bool write = true;
     bool wait = true;
@@ -65,7 +65,7 @@ public class Writebackground : MonoBehaviour
                     {
                         mainText.text += key.ToString().ToLower();
                         pressed++;
-                        player.position = new Vector2(player.position.x - 0.25f, player.position.y);
+                        player.position = new Vector2(player.position.x - 0.2f, player.position.y);
                         cursorTxt.text = cursorTxt.text.Insert(0, " ");
                         break;
                     }
@@ -93,7 +93,7 @@ public class Writebackground : MonoBehaviour
             string pass = mainText.text.Substring(originalLen, 2);
             write = pass != passStr;
             mainText.text = word;
-            player.position = new Vector2(player.position.x + 0.5f, player.position.y);
+            player.position = new Vector2(player.position.x + 0.4f, player.position.y);
             cursorTxt.text = "|";
         }
 

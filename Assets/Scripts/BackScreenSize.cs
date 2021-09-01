@@ -3,10 +3,10 @@ using Cinemachine;
 
 public class BackScreenSize : MonoBehaviour
 {
+    public Transform follow;
     public float followSpeed = 3f;
     public float resizeSpeed = 2f;
-
-    CinemachineVirtualCamera vCam;
+    public bool resize = true;
 
     Vector2 originalSize;
     bool reduce = false;
@@ -16,11 +16,16 @@ public class BackScreenSize : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float width = Camera.main.orthographicSize * 2f * Screen.width / Screen.height;
-        originalSize = new Vector2(width - 1.5f, 5f);
-        transform.localScale = originalSize;
+        if(resize)
+        {
+            float width = Camera.main.orthographicSize * 2f * Screen.width / Screen.height;
+            originalSize = new Vector2(width - 1.5f, 5f);
+            transform.localScale = originalSize;
+        }
+        else
+            originalSize = transform.localScale;
 
-        vCam = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
+        //vCam = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
     }
 
     /*void Update()
@@ -47,8 +52,8 @@ public class BackScreenSize : MonoBehaviour
             );
 
             transform.position = new Vector2(
-                Mathf.Lerp(transform.position.x, vCam.transform.position.x, Time.fixedDeltaTime * followSpeed),
-                Mathf.Lerp(transform.position.y, vCam.transform.position.y, Time.fixedDeltaTime * followSpeed)
+                Mathf.Lerp(transform.position.x, follow.transform.position.x, Time.fixedDeltaTime * followSpeed),
+                Mathf.Lerp(transform.position.y, follow.transform.position.y, Time.fixedDeltaTime * followSpeed)
             );
         }
         else
@@ -65,8 +70,8 @@ public class BackScreenSize : MonoBehaviour
             );*/
 
             transform.position = new Vector2(
-                vCam.transform.position.x,
-                vCam.transform.position.y
+                follow.transform.position.x,
+                follow.transform.position.y
             );
         }
     }

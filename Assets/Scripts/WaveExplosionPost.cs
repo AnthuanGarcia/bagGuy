@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveExplosionPost : MonoBehaviour
 {
     public Material mat;
-	void Awake() {
-		mat=new Material(Shader.Find("MyShaders/LiquidWarpEffect"));
-	}
 	protected float _radius;
+
+	void Awake()
+	{
+		mat = new Material(Shader.Find("MyShaders/LiquidWarpEffect"));
+	}
+
 	public float radius {
 		get => _radius;
 		set { 

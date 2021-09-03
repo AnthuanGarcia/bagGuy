@@ -7,13 +7,14 @@ using System.Text;
 public class Writebackground : MonoBehaviour
 {
     public Transform fixedPoint;
+    public string word = "Who  am?";
+    public string passStr = "me";
+
     CinemachineVirtualCamera vCam;
     Transform player;
     GameObject[] blocks;
     GameObject cursorText;
     Text mainText, cursorTxt;
-    const string word = "Who  am?";
-    const string passStr = "me";
     bool write = true;
     bool wait = true;
     int originalLen;
@@ -41,6 +42,7 @@ public class Writebackground : MonoBehaviour
         blocks = GameObject.FindGameObjectsWithTag("AntiFall");
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
+        mainText.text = word;
         originalLen = mainText.text.Length;
 
         foreach(KeyCode key in System.Enum.GetValues(typeof(KeyCode)))

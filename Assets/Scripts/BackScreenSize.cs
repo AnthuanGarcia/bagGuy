@@ -7,6 +7,7 @@ public class BackScreenSize : MonoBehaviour
     public float followSpeed = 3f;
     public float resizeSpeed = 2f;
     public bool resize = true;
+    public bool initOnZero = false;
 
     Vector2 originalSize;
     bool reduce = false;
@@ -24,6 +25,9 @@ public class BackScreenSize : MonoBehaviour
         }
         else
             originalSize = transform.localScale;
+
+        if(initOnZero)
+            transform.localScale = Vector2.zero;
 
         //vCam = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
     }
@@ -58,10 +62,11 @@ public class BackScreenSize : MonoBehaviour
         }
         else
         {
-            transform.localScale = new Vector2(
-                Mathf.Lerp(transform.localScale.x, originalSize.x, Time.fixedDeltaTime * resizeSpeed),
-                Mathf.Lerp(transform.localScale.y, originalSize.y, Time.fixedDeltaTime * resizeSpeed)
-            );
+            if(!initOnZero)
+                transform.localScale = new Vector2(
+                    Mathf.Lerp(transform.localScale.x, originalSize.x, Time.fixedDeltaTime * resizeSpeed),
+                    Mathf.Lerp(transform.localScale.y, originalSize.y, Time.fixedDeltaTime * resizeSpeed)
+                );
 
             /*transform.position = Vector2.Lerp(
                 transform.position,
@@ -81,6 +86,7 @@ public class BackScreenSize : MonoBehaviour
         widthRed = wid;
         heightRed = hei;
         reduce = redu;
+        initOnZero = false;
     }
 
 }

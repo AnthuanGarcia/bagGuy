@@ -60920,6 +60920,7 @@ MonoBehaviour:
   width: 0
   height: 0
   reduce: 0
+  verifyTiles: 0
   OnResizeBackgroundEvent:
     m_PersistentCalls:
       m_Calls:
@@ -79760,6 +79761,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7739376694343532700, guid: f62c5539cd902154bb1bfd83ee759707, type: 3}
   m_PrefabInstance: {fileID: 879944323}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1323591574 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5845162825230846609, guid: a2c9f9b0be0c1bf488f3e08b3923d957, type: 3}
+  m_PrefabInstance: {fileID: 2037401235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1325940199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92353,6 +92359,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3079992508288087928, guid: e58a71d902b9f554fa453cadf6cd3f24, type: 3}
+      propertyPath: follow
+      value: 
+      objectReference: {fileID: 1323591574}
     - target: {fileID: 3079992508288087929, guid: e58a71d902b9f554fa453cadf6cd3f24, type: 3}
       propertyPath: m_RootOrder
       value: 3

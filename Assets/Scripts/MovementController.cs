@@ -197,7 +197,7 @@ public class MovementController : MonoBehaviour
 				m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
 			}
-			else if(m_Rigidbody2D.gravityScale != originalGravity)
+			else if(m_Rigidbody2D.gravityScale != originalGravity && !onePress)
 			{
 				timePressDash = Time.time - startTime;
 				

@@ -8,7 +8,7 @@ public class ChangeMaterialInterval : MonoBehaviour
 
     int idx = 0;
     float time = 0;
-    bool start = false;
+    bool start = true;
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +32,5 @@ public class ChangeMaterialInterval : MonoBehaviour
 
             time += Time.deltaTime;
         }
-    }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.tag == "Player")
-            start = true;
     }
 }

@@ -141,6 +141,7 @@ public class MovementController : MonoBehaviour
 			{
 				m_Grounded = false;
 				//StartCoroutine(MaxPressTimeJump());
+				m_Rigidbody2D.velocity = Vector2.zero;
 				m_Rigidbody2D.AddForce(Vector2.up * m_JumpForce);
 			}
 

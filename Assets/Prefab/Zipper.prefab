@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1939239631953539236}
   - component: {fileID: 1939239631953539235}
   - component: {fileID: 1939239631953539232}
+  - component: {fileID: 2245951091484346605}
   m_Layer: 0
   m_Name: Zipper
   m_TagString: Untagged
@@ -119,7 +120,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.3
 --- !u!114 &1939239631953539232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,3 +136,18 @@ MonoBehaviour:
   m_Force: 30
   m_VerticalForce: 1
   m_TimeImpulse: 0.1
+--- !u!114 &2245951091484346605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939239631953539239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc7ca94aa97e324e9788a9518a506fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatStrength: 0.8
+  heightWave: 10
+  side: 0

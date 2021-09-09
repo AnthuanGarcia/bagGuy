@@ -20,6 +20,8 @@ public class SpawnTrigger : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
+            AudioManager.sharedInstance.Play("death");
+            
             if (restart)
             {
                 restartPlatform.Invoke();
@@ -30,6 +32,7 @@ public class SpawnTrigger : MonoBehaviour
                 restartTileBackground.Invoke();
 
             point.SpawnToPosition();
+
         }
     }
 }

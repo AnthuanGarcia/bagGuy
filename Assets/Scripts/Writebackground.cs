@@ -22,6 +22,7 @@ public class Writebackground : MonoBehaviour
     KeyCode[] letters = new KeyCode[26];
     float time = 0;
     bool changeCursor;
+    string[] keySounds = {"keySound1", "keySound2", "keySound3"};
 
     
     void Awake()
@@ -65,8 +66,10 @@ public class Writebackground : MonoBehaviour
                 {
                     if(Input.GetKeyDown(key))
                     {
+                        int idx = Random.Range(0, keySounds.Length);
                         mainText.text += key.ToString().ToLower();
                         pressed++;
+                        AudioManager.sharedInstance.Play(keySounds[idx]);
                         player.position = new Vector2(player.position.x - 0.2f, player.position.y);
                         cursorTxt.text = cursorTxt.text.Insert(0, " ");
                         break;

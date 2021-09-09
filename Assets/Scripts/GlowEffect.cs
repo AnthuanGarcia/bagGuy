@@ -4,12 +4,14 @@ using SpriteGlow;
 public class GlowEffect : MonoBehaviour
 {
     SpriteGlowEffect glowEffect;
+    AudioManager audioManager;
     int pointsTouched = 0;
     const int maxPoints = 40;
 
     void Start()
     {
         glowEffect = GetComponent<SpriteGlowEffect>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -31,6 +33,9 @@ public class GlowEffect : MonoBehaviour
         {
             SpriteGlowEffect door = collision.gameObject.GetComponent<SpriteGlowEffect>();
             door.GlowBrightness = 2.5f;
+            collision.GetComponent<AudioSource>().Play();
+            collision.GetComponent<BoxCollider2D>().enabled = false;
+            //audioManager.Play("door");
         }
     }
 }

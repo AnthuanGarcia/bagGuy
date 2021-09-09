@@ -50,6 +50,7 @@ public class MovementController : MonoBehaviour
 	bool hasDash = true;
 	WaveExplosionPost effect;
 	float sqrMaxVel;
+	AudioManager audioManager;
 
 	private void Awake()
 	{
@@ -64,6 +65,8 @@ public class MovementController : MonoBehaviour
 			OnCrouchEvent = new BoolEvent();
 
 		sqrMaxVel = m_MaxVelocity * m_MaxVelocity;
+		audioManager = FindObjectOfType<AudioManager>();
+
 	}
 
 	private void Start()
@@ -85,7 +88,10 @@ public class MovementController : MonoBehaviour
 			m_Grounded = true;
 
 			if (!wasGrounded)
+			{
 				OnLandEvent.Invoke();
+				audioManager.Play("landing");
+			}
 			
 		}
 		else
@@ -141,6 +147,7 @@ public class MovementController : MonoBehaviour
 			{
 				m_Grounded = false;
 				//StartCoroutine(MaxPressTimeJump());
+				audioManager.Play("jump");
 				m_Rigidbody2D.velocity = Vector2.zero;
 				m_Rigidbody2D.AddForce(Vector2.up * m_JumpForce);
 			}
@@ -158,17 +165,7 @@ public class MovementController : MonoBehaviour
 		if(!m_Grounded)
 		{
 			if(m_Rigidbody2D.velocity.magnitude > m_MaxVelocity)
-			{
-				//float sign = verticalSpeed >= 0 ? -1 : 1;
-
-				/*m_Rigidbody2D.velocity = Vector2.Lerp(
-					m_Rigidbody2D.velocity,
-					Vector2.zero,
-					Time.fixedDeltaTime * 30
-				);*/
-
 				m_Rigidbody2D.velocity = Vector2.ClampMagnitude(m_Rigidbody2D.velocity, m_MaxVelocity);
-			}
 
 			animator.SetBool("isDashing", horizontalDash && hasDash);
 
@@ -181,6 +178,7 @@ public class MovementController : MonoBehaviour
 				m_Rigidbody2D.AddRelativeForce(new Vector2(650f * sign, 210f));
 				hasDash = false;
 
+				audioManager.Play("horizontalDash");
 				effect.StartIt(Camera.main.WorldToScreenPoint(transform.position));
 			}
 

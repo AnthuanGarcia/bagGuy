@@ -41,6 +41,7 @@ public class ZipperDash : MonoBehaviour
             sign = playerRb.velocity.x >= 0 ? 1 : -1;
             playerRb.gravityScale = 0.25f;
             animator.SetTrigger("boost");
+            AudioManager.sharedInstance.Play("zipper");
             StartCoroutine(ImpulseTime());
         }
     }

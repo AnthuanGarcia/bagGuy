@@ -78,6 +78,7 @@ public class ComposeBakcground : MonoBehaviour
 
             move = true;
             colliderTile.enabled = false;
+            AudioManager.sharedInstance.Play("collectTile");
         }
     }
 

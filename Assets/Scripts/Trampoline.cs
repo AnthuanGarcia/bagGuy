@@ -32,6 +32,8 @@ public class Trampoline : MonoBehaviour
                 rb.AddForce(Vector2.up * lastVel * BringForce);
             else
                 rb.AddForce(Vector2.up * BringForce * 10f);
+
+            AudioManager.sharedInstance.Play("bounceTrampoline");
         }
     }
 }

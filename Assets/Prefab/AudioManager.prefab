@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1521429849929134686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521429849929134687}
+  - component: {fileID: 1521429849929134680}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1521429849929134687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521429849929134686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1521429849929134680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521429849929134686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6ff27e4a6683c419d1dab160ac98f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: jump
+    Clip: {fileID: 8300000, guid: 00fa0b740459aa44b81c1da93463ea50, type: 3}
+    Volume: 0.15
+    Pitch: 0.8
+    loop: 0
+    source: {fileID: 0}
+  - name: landing
+    Clip: {fileID: 8300000, guid: 1e688b1a7c35d6842a853c6adc5cffdc, type: 3}
+    Volume: 0.1
+    Pitch: 0.8
+    loop: 0
+    source: {fileID: 0}
+  - name: horizontalDash
+    Clip: {fileID: 8300000, guid: 95ee3e5b60d60cb4094c2d4eca2f87f5, type: 3}
+    Volume: 0.2
+    Pitch: 0.85
+    loop: 0
+    source: {fileID: 0}
+  - name: death
+    Clip: {fileID: 8300000, guid: e1ceb90fc6ffd1f41a9992ff1ab2db26, type: 3}
+    Volume: 0.5
+    Pitch: 0.8
+    loop: 0
+    source: {fileID: 0}
+  - name: themeIntro
+    Clip: {fileID: 8300000, guid: da79d8ed4a652564da025bb1ad775a7f, type: 3}
+    Volume: 0.6
+    Pitch: 0.8
+    loop: 1
+    source: {fileID: 0}
+  - name: themeOne
+    Clip: {fileID: 8300000, guid: 903e6cd89b1fcb146905e54c055b39cb, type: 3}
+    Volume: 0.9
+    Pitch: 0.8
+    loop: 1
+    source: {fileID: 0}
+  - name: themeTwo
+    Clip: {fileID: 8300000, guid: ec18ebe65537d6b40b95230d6bd4b2d6, type: 3}
+    Volume: 0.075
+    Pitch: 0.9
+    loop: 1
+    source: {fileID: 0}
+  - name: keySound1
+    Clip: {fileID: 8300000, guid: 1f325dd3c7d99c243b94a26b073bd11c, type: 3}
+    Volume: 1
+    Pitch: 0.9
+    loop: 0
+    source: {fileID: 0}
+  - name: keySound2
+    Clip: {fileID: 8300000, guid: 1fa7edfe46635f54886620c5ab9bf819, type: 3}
+    Volume: 1
+    Pitch: 0.9
+    loop: 0
+    source: {fileID: 0}
+  - name: keySound3
+    Clip: {fileID: 8300000, guid: 961c97cefe033e94c8ab75cb3685299c, type: 3}
+    Volume: 1
+    Pitch: 0.9
+    loop: 0
+    source: {fileID: 0}
+  - name: collectTile
+    Clip: {fileID: 8300000, guid: 9f676f3e40b1f1d4a81bf5a7c7e55de5, type: 3}
+    Volume: 1
+    Pitch: 0.8
+    loop: 0
+    source: {fileID: 0}
+  - name: bounceTrampoline
+    Clip: {fileID: 8300000, guid: 971bc746f655dfb42bb50f8e231da5d2, type: 3}
+    Volume: 0.5
+    Pitch: 0.8
+    loop: 0
+    source: {fileID: 0}
+  - name: zipper
+    Clip: {fileID: 8300000, guid: bf14c8b50a118bf41b3610968b9ede23, type: 3}
+    Volume: 1
+    Pitch: 0.8
+    loop: 0
+    source: {fileID: 0}

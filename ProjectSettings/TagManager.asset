@@ -15,6 +15,7 @@ TagManager:
   - CursorTxt
   - PartBackground
   - Load
+  - meter
   layers:
   - Default
   - TransparentFX

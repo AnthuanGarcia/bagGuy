@@ -36,7 +36,7 @@ public class MovementController : MonoBehaviour
 	[System.Serializable]
 	public class DashEvent : UnityEvent<Vector3> { }
 	public DashEvent OnDashEvent;
-    Animator animator;
+    Animator animator, dashMeter;
 	bool coyoteJump;
 
 	/* Dash variables */
@@ -51,11 +51,20 @@ public class MovementController : MonoBehaviour
 	WaveExplosionPost effect;
 	float sqrMaxVel;
 	AudioManager audioManager;
+	GameObject dashMeterObj;
+	float inc = 0f;
+	int meterDash = 0;
+	bool initMeter = false;
 
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
+
+		dashMeterObj = GameObject.FindGameObjectWithTag("meter");
+		dashMeter = dashMeterObj.GetComponent<Animator>();
+		dashMeterObj.SetActive(false);
+		
 		originalGravity = m_Rigidbody2D.gravityScale;
 
 		if (OnLandEvent == null)
@@ -72,6 +81,20 @@ public class MovementController : MonoBehaviour
 	private void Start()
 	{
 		effect = WaveExplosionPost.Get();
+	}
+
+	void Update()
+	{
+		if(initMeter)
+		{
+			if(inc > m_DashTime/6 && meterDash <= 6)
+			{
+				inc = 0f;
+				dashMeter.SetInteger("phase", ++meterDash);
+			}
+
+			inc += Time.deltaTime;
+		}
 	}
 
 	private void FixedUpdate()
@@ -91,6 +114,7 @@ public class MovementController : MonoBehaviour
 			{
 				OnLandEvent.Invoke();
 				audioManager.Play("landing");
+				dashMeterObj.SetActive(false);
 			}
 			
 		}
@@ -159,6 +183,8 @@ public class MovementController : MonoBehaviour
 			
 			downDash = false;
 			hasDash = true;
+			initMeter = false;
+			meterDash = 0;
 			//hasTimeJump = true;
 		}
 
@@ -188,6 +214,8 @@ public class MovementController : MonoBehaviour
 				{
 					StartCoroutine(MaxPressTimeDash());
 					startTime = Time.time;
+					dashMeterObj.SetActive(true);
+					initMeter = true;
 					onePress = false;
 				}
 
@@ -198,6 +226,8 @@ public class MovementController : MonoBehaviour
 			}
 			else if(m_Rigidbody2D.gravityScale != originalGravity && !onePress)
 			{
+				initMeter = false;
+				meterDash = 0;
 				timePressDash = Time.time - startTime;
 				
 				m_Rigidbody2D.gravityScale = originalGravity;
@@ -243,6 +273,18 @@ public class MovementController : MonoBehaviour
 		hasTimeDash = true;
 		yield return new WaitForSeconds(m_DashTime);
 		hasTimeDash = false;		
+	}
+
+	IEnumerator MeterDash()
+	{
+		const int nOfPoints = 6;
+
+		for(int i = 1; i < nOfPoints; i++)
+		{
+			dashMeter.SetInteger("phase", i);
+			yield return new WaitForSeconds(m_DashTime / (float)nOfPoints);
+		}
+
 	}
 
 	/*IEnumerator MaxPressTimeJump()

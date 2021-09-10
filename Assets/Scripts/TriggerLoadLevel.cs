@@ -4,6 +4,7 @@ public class TriggerLoadLevel : MonoBehaviour
 {
     public LevelLoader loader;
     public string nameSongToStop;
+    public bool verifyTiles = false;
 
     void Start()
     {
@@ -15,8 +16,19 @@ public class TriggerLoadLevel : MonoBehaviour
     {
         if(col.tag == "Player")
         {
-            loader.LoadNextLevel();
-            AudioManager.sharedInstance.Stop(nameSongToStop, 2f);
+            if(verifyTiles)
+            {
+                if(ComposeBakcground.tilesBackground == 10)
+                {
+                    loader.LoadNextLevel();
+                    AudioManager.sharedInstance.Stop(nameSongToStop, 2f);
+                }
+            }
+            else
+            {
+                loader.LoadNextLevel();
+                AudioManager.sharedInstance.Stop(nameSongToStop, 2f);
+            }
         }
     }
 }

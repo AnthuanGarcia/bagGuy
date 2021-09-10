@@ -43,6 +43,12 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
+    public void Play(string name, float fadeIn, float volume)
+    {
+        Sound s = sounds[soundsOrd[name]];
+        StartCoroutine(AudioFade.FadeIn(s.source, fadeIn, volume));
+    }
+
     public void Stop(string name, float fadeOut)
     {
         Sound s = sounds[soundsOrd[name]];

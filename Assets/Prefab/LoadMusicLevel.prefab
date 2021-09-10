@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 159924291934057508}
-  - component: {fileID: 159924291934057509}
+  - component: {fileID: 486590799091387647}
+  - component: {fileID: 5832910213722994974}
   m_Layer: 0
   m_Name: LoadMusicLevel
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &159924291934057509
+--- !u!114 &486590799091387647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +41,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 159924291934057511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0241bed55e3c2fb4f9ab416cd27e422a, type: 3}
+  m_Script: {fileID: 11500000, guid: 67445e39ad5ce9a4292316fb7ab8c624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameSong: themeIntro
+  nameSong: themeTwo
+  fadeIn: 3
+  volume: 0.6
+--- !u!68 &5832910213722994974
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159924291934057511}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -5, y: 0}
+  - {x: 5, y: 0}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

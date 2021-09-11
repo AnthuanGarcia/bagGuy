@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bceee0c18229a141889b69e4e3daffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 5
+  time: 11
 --- !u!1 &1105074850
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +406,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 610850751133104100, guid: 7bb5acd824abd764dab29ce0ff43dd80, type: 3}
+      propertyPath: timeTransition
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 610850751133104102, guid: 7bb5acd824abd764dab29ce0ff43dd80, type: 3}
       propertyPath: m_Name
       value: LevelLoader

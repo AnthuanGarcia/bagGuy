@@ -5,12 +5,12 @@ public class ChangeView : MonoBehaviour
 {
     public CinemachineVirtualCamera exitView;
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void Update()
     {
-        if(collider.tag == "Player")
+        if(Input.anyKeyDown)
         {
             exitView.Priority = 8;
-            GetComponent<BoxCollider2D>().enabled = false;
+            gameObject.SetActive(false);
         }
     }
 }

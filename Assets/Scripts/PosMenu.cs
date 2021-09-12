@@ -5,6 +5,7 @@ public class PosMenu : MonoBehaviour
 {
     public static bool isGamePaused = false;
     public GameObject pauseMenuUi;
+    public string themeToStop;
 
     // Update is called once per frame
     void Update()
@@ -39,6 +40,7 @@ public class PosMenu : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AudioManager.sharedInstance.Stop(themeToStop);
         Time.timeScale = 1f;
     }
 

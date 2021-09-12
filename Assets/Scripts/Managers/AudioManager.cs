@@ -49,6 +49,14 @@ public class AudioManager : MonoBehaviour
         StartCoroutine(AudioFade.FadeIn(s.source, fadeIn, volume));
     }
 
+    public void Stop(string name)
+    {
+        Sound s = sounds[soundsOrd[name]];
+
+        if(s.source.isPlaying)
+            s.source.Stop();
+    }
+
     public void Stop(string name, float fadeOut)
     {
         Sound s = sounds[soundsOrd[name]];

@@ -16,9 +16,15 @@ Shader "MyShaders/GlamPink"
         Pass
         {
             CGPROGRAM
-            #pragma vertex vert
+            #pragma vertex SpriteVert
+            #pragma fragment frag // we've changed the name of the func to "frag". The implementation can be found below
+            #pragma target 2.0
+            #pragma multi_compile_instancing
+            #pragma multi_compile_local _ PIXELSNAP_ON
+            #pragma multi_compile _ ETC1_EXTERNAL_ALPHA
+            #include "UnitySprites.cginc"
+            /*#pragma vertex vert
             #pragma fragment frag
-            #pragma fragmentoption ARB_precision_hint_fastest
             #include "UnityCG.cginc"
 
             struct appdata_t {
@@ -36,7 +42,7 @@ Shader "MyShaders/GlamPink"
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 return o;
-            }
+            }*/
 
             float colormap_red(float x) {
                 if (x < 0.0) {
@@ -94,19 +100,19 @@ Shader "MyShaders/GlamPink"
                 return res*res;
             }
 
-            const float2x2 mtx = float2x2( 0.80,  0.60, -0.60,  0.80 );
+            static const float2x2 mtx = float2x2( 0.80,  0.60, -0.60,  0.80 );
 
             float fbm( fixed2 p )
             {
                 float f = 0.0;
-                float iTime = _Time * 10.0;
+                //float iTime = _Time * 10.0;
 
-                f += 0.500000*noise( p + iTime  ); p = mul(mtx, p * 2.02);
+                f += 0.500000*noise( p + _Time.y  ); p = mul(mtx, p * 2.02);
                 f += 0.031250*noise( p ); p = mul(mtx, p*2.01);
                 f += 0.250000*noise( p ); p = mul(mtx, p*2.03);
                 f += 0.125000*noise( p ); p = mul(mtx, p*2.01);
                 f += 0.062500*noise( p ); p = mul(mtx, p*2.04);
-                f += 0.015625*noise( p + sin(iTime) );
+                f += 0.015625*noise( p + sin(_Time.y) );
 
                 return f/0.96875;
             }

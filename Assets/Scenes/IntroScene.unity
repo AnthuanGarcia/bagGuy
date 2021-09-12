@@ -4425,6 +4425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause
       objectReference: {fileID: 0}
+    - target: {fileID: 2725997618967213772, guid: f08027aca83486d4ea5e60049e73c306, type: 3}
+      propertyPath: themeToStop
+      value: themeIntro
+      objectReference: {fileID: 0}
     - target: {fileID: 2725997618967213773, guid: f08027aca83486d4ea5e60049e73c306, type: 3}
       propertyPath: m_Pivot.x
       value: 0

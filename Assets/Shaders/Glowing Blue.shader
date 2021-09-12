@@ -14,23 +14,27 @@ Shader "MyShaders/Glowing Blue"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #pragma fragmentoption ARB_precision_hint_fastest
             #include "UnityCG.cginc"
 
-            struct appdata_t {
+            struct appdata
+            {
                 float4 vertex : POSITION;
-                float2 texcoord: TEXCOORD0;
+                float2 uv : TEXCOORD0;
             };
 
-            struct v2f {
-                float4 vertex : POSITION;
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                float4 vertex : SV_POSITION;
             };
 
             float4 _MainTex_ST;
 
-            v2f vert (appdata_t v) {
+            v2f vert (appdata v)
+            {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
+                o.uv = TRANSFORM_TEX( v.uv, _MainTex );
                 return o;
             }
 
@@ -48,7 +52,7 @@ Shader "MyShaders/Glowing Blue"
                 return res*res;
             }
 
-            const float2x2 m2 = float2x2(0.8,-0.6,0.6,0.8);
+            static const float2x2 m2 = float2x2(0.8,-0.6,0.6,0.8);
 
             float fbm( in fixed2 p ){
                 float f = 0.0;
@@ -71,6 +75,7 @@ Shader "MyShaders/Glowing Blue"
             half4 frag( v2f i ) : COLOR {
                 //fixed2 uv = i.texcoord;
                 fixed2 uv = (2.0 * i.vertex - _ScreenParams.xy) / min(_ScreenParams.x, _ScreenParams.y);
+                //fixed2 uv = i.uv;
                 
                 uv *= 4.5; // Scale UV to make it nicer in that big screen !
                 float displacement = pattern(uv);

@@ -22,12 +22,14 @@ public class TriggerLoadLevel : MonoBehaviour
                 {
                     loader.LoadNextLevel();
                     AudioManager.sharedInstance.Stop(nameSongToStop, 2f);
+                    PlayerMovement.canMove = false;
                 }
             }
             else
             {
                 loader.LoadNextLevel();
                 AudioManager.sharedInstance.Stop(nameSongToStop, 2f);
+                PlayerMovement.canMove = false;
             }
         }
     }

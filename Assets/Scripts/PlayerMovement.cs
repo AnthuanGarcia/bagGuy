@@ -13,6 +13,11 @@ public class PlayerMovement : MonoBehaviour
     bool horizontalDash = false;
     float horizontalMove;
 
+    void Awake()
+    {
+        if(!canMove) canMove = true;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

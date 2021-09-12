@@ -70,7 +70,7 @@ public class Writebackground : MonoBehaviour
                         mainText.text += key.ToString().ToLower();
                         pressed++;
                         AudioManager.sharedInstance.Play(keySounds[idx]);
-                        player.position = new Vector2(player.position.x - 0.2f, player.position.y);
+                        player.position = new Vector2(player.position.x - 0.22f, player.position.y);
                         cursorTxt.text = cursorTxt.text.Insert(0, " ");
                         break;
                     }
@@ -98,7 +98,7 @@ public class Writebackground : MonoBehaviour
             string pass = mainText.text.Substring(originalLen, 2);
             write = pass != passStr;
             mainText.text = word;
-            player.position = new Vector2(player.position.x + 0.4f, player.position.y);
+            player.position = new Vector2(player.position.x + 0.44f, player.position.y);
             cursorTxt.text = "|";
         }
 

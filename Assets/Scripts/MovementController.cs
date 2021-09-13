@@ -115,6 +115,7 @@ public class MovementController : MonoBehaviour
 				OnLandEvent.Invoke();
 				audioManager.Play("landing");
 				dashMeterObj.SetActive(false);
+				animator.SetBool("isDashing", false);
 			}
 			
 		}
@@ -127,6 +128,8 @@ public class MovementController : MonoBehaviour
 			}
 
 		}
+
+		animator.SetBool("Grounded", m_Grounded);
 
 	}
 
@@ -193,13 +196,12 @@ public class MovementController : MonoBehaviour
 			if(m_Rigidbody2D.velocity.magnitude > m_MaxVelocity)
 				m_Rigidbody2D.velocity = Vector2.ClampMagnitude(m_Rigidbody2D.velocity, m_MaxVelocity);
 
-			animator.SetBool("isDashing", horizontalDash && hasDash);
-
 			if(horizontalDash && hasDash)
 			{
 				//Vector2 pos = Camera.main.WorldToScreenPoint(transform.position);
 				//if(OnDashEvent != null) OnDashEvent.Invoke(Camera.main.WorldToScreenPoint(transform.position));
 				float sign = m_FacingRight ? 1 : -1;
+				animator.SetBool("isDashing", true);
 				m_Rigidbody2D.velocity = Vector2.zero;
 				m_Rigidbody2D.AddRelativeForce(new Vector2(650f * sign, 210f));
 				hasDash = false;
@@ -245,9 +247,6 @@ public class MovementController : MonoBehaviour
 				m_Rigidbody2D.AddForce(Vector2.up * m_JumpForce);
 			}
 		}
-
-        animator.SetBool("Grounded", m_Grounded);
-
 	}
 
 	private void Flip()

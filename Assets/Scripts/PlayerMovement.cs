@@ -68,10 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateState()
     {
-        if (Mathf.Approximately(horizontalMove, 0))
-            animator.SetBool("isWalking", false);
-        else
-            animator.SetBool("isWalking", true);
+        animator.SetBool("isWalking", !Mathf.Approximately(horizontalMove, 0));
 
         if(jump) 
         {

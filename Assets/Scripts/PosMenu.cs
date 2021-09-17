@@ -6,6 +6,7 @@ public class PosMenu : MonoBehaviour
     public static bool isGamePaused = false;
     public GameObject pauseMenuUi;
     public string themeToStop;
+    public bool restartTiles = false;
 
     // Update is called once per frame
     void Update()
@@ -41,6 +42,7 @@ public class PosMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         AudioManager.sharedInstance.Stop(themeToStop);
+        if(restartTiles) ComposeBakcground.tilesBackground = 0;
         Time.timeScale = 1f;
     }
 
